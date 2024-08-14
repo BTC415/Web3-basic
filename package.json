@@ -12,6 +12,7 @@
   "dependencies": {
     "dotenv": "^16.4.5",
     "hardhat": "^2.22.8",
+    "solc": "^0.8.0",
     "web3": "^4.11.1"
   },
   "devDependencies": {
