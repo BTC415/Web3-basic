@@ -1,13 +1,17 @@
+import abi from "./contracts/MyContractAbi.json"
+import bytecode from "./contracts/MyContractBytecode.bin"
+
 const { Web3 } = require('web3');
 const path = require('path');
 const fs = require('fs');
 
 const web3 = new Web3("http://127.0.0.1:8545/");
 
-const bytecodePath = path.join(`${__dirname}/contracts`, "MyContractBytecode.bin");
-const bytecode = fs.readFileSync(bytecodePath, "utf8");
+// const bytecodePath = path.join(`${__dirname}/contracts`, "MyContractBytecode.bin");
+// const bytecode = fs.readFileSync(bytecodePath, "utf8");'
 
-const abi = require("./contracts/MyContractAbi.json");
+// const bytecode = require("./contracts/MyContractBytecode.bin")
+// const abi = require("./contracts/MyContractAbi.json");
 const myContract = new web3.eth.Contract(abi);
 myContract.handleRevert = true;
 
